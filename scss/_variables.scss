@@ -1,0 +1,11 @@
+$midResStep: 768px;
+$higResStep: 1024px;
+
+@mixin respondTo($media) {
+  @if $media == midRes {
+    @media only screen and (min-width: $midResStep) and (max-width: $higResStep) { @content; }
+  }
+  @else if $media == higRes {
+    @media only screen and (min-width: $higResStep + 1) { @content; }
+  }
+}
