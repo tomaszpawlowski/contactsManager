@@ -40,17 +40,68 @@ main {
     padding: 2%;
 }
 footer {
+    svg[id^="icon"] {
+        fill: $light;
+        height: 32px;
+        width: auto;
+        margin: 1em;
+    }
     padding: 5em 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    div#infoBox{
+        svg[id^="icon"] {
+            fill: $light;
+            height: 22px;
+            width: auto;
+            margin: 1em;
+        }
+        flex-grow: 2;
+        p {
+            font-size: 0.8em;
+        }
+        p#authorName {
+            font-size: 2em;
+            font-weight: 100;
+        }
+        p#authorSurname {
+            font-size: 1.7em;
+            font-weight: 800;
+            padding-left: 0.2em;
+        }
+    }
+    div#authorBox {
+        flex-grow: 1;
+        text-align: right;
+    }
 }
 a {
     text-decoration: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5%;
+    margin: 1em;
 }
 form input {
     width: 50%;
+}
+ul#listOfContacts li {
+    list-style: none;
+    margin: 2em;
+    .name {
+        font-size: 2em;
+        font-weight: 500;
+    }
+    .surname {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
 }
