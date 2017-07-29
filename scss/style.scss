@@ -7,10 +7,7 @@
     box-sizing: border-box;
     //border: 1px #050 dashed;
 }
-header, nav, main, footer {
-    display: flex;
-    display: block;
-}
+
 header {
     padding: 2em;
     flex-direction: column;
