@@ -1,1 +1,8 @@
-{}
+{
+  "groups": [
+    { "id": 1, "title": "contacts to view", "labelColor": "#08F" }
+  ],
+  "contacts": [
+    { "id": 1, "name": "Jan", "surname": "Kowalski" }
+  ]
+}

@@ -45,3 +45,12 @@ footer {
 a {
     text-decoration: none;
 }
+form label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5%;
+}
+form input {
+    width: 50%;
+}
