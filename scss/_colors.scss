@@ -2,13 +2,14 @@
 $dark: #2A2C2B;
 $light: #DDD;
 $akcent: #1E1E20;
-$akcent2: #DC3522;
+$akcent2: #038df0;
 
 body {
-    background-image: url('./../images/asfalt.png');
-    color: $light;
-}
-main {
     background-image: url('./../images/cork-wallet.png');
     color: $dark;
+}
+main {
+    background-image: url('./../images/asfalt.png');
+    color: $light;
+
 }

@@ -16,13 +16,13 @@ $(document).ready(function () {
   }
   loadAPI();
   */
-  if ($("ul#listOfContacts").length == -5) {
+  if ($("ul#listOfContacts").length) {
     $.ajax({
       url: localJsonServerURL + "contacts",
       dataType: "json",
     }).done(function (response) {
       $.each(response, function (id, nItem) {
-        var nListItem = $("<li>", { class: "animation-element" }).attr("data-id", id);
+        var nListItem = $("<li>").attr("data-id", id);
         var name = $("<p>", { class: "name" });
         var surname = $("<p>", { class: "surname" });
         var telephone = $("<p>", { class: "telephone" });
@@ -33,9 +33,12 @@ $(document).ready(function () {
 
         $("ul#listOfContacts").append(nListItem);
 
-
       })
-
+      
+      $("ul#listOfContacts li").on("click", function(){
+        $(this).toggleClass("active");
+        })
+      
     }).fail(function (error) {
       console.log(error);
     })

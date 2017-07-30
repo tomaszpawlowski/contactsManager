@@ -15,6 +15,7 @@ header {
     h1{
         position: relative;
         z-index: 2;
+        color: $dark;
         text-align: center;
         margin: 0.5em;
         font-size: 2em;
@@ -23,7 +24,7 @@ header {
     }
     nav {
         a, li {
-            color: $light;
+            color: $dark;
         }
         ul {
             display: flex;
@@ -41,10 +42,13 @@ main {
 }
 footer {
     svg[id^="icon"] {
-        fill: $light;
+        fill: $dark;
         height: 32px;
         width: auto;
         margin: 1em;
+    }
+    svg[id^="icon"]:hover {
+        fill: $akcent2;
     }
     padding: 5em 3em;
     display: flex;
@@ -52,10 +56,8 @@ footer {
     justify-content: space-around;
     div#infoBox{
         svg[id^="icon"] {
-            fill: $light;
             height: 22px;
-            width: auto;
-            margin: 1em;
+            
         }
         flex-grow: 2;
         p {
@@ -93,15 +95,31 @@ form label {
 form input {
     width: 50%;
 }
-ul#listOfContacts li {
-    list-style: none;
-    margin: 2em;
-    .name {
-        font-size: 2em;
-        font-weight: 500;
+ul#listOfContacts {
+    * {
+        -webkit-transition: color 0.5s, padding 1s, margin 1s; 
+        transition: color 0.5s, padding 1s, margin 1s;
     }
-    .surname {
-        font-size: 1.5em;
-        font-weight: 300;
+    li {
+    list-style: none;
+    margin: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+        .name {
+            font-size: 2em;
+            font-weight: 500;
+        }
+        .surname {
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+    }
+    li.active{
+        color: $akcent2;
+        padding: 2em 0.5em;
+        p {
+            margin: 0.2em 0em;
+        }
     }
 }
+
